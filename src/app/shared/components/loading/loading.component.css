@@ -1,0 +1,43 @@
+.dialog-container {
+  display: flex;
+  position: fixed;
+  z-index: 99999;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.48);
+  top: 0%;
+  cursor: progress;
+}
+
+.dialog-spinner {
+ margin: auto;
+ display: table;
+ padding: 20px;
+ text-align: center;
+ width: 300px;
+ background-color: #FFFFFF;
+ box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+ border-radius: 2px;
+ box-sizing: border-box;
+}
+
+.dialog-spinner-title {
+ display: flex;
+ justify-content: center;
+}
+
+.dialog-spinner-content {
+ display: flex;
+ justify-content: center;
+ padding: 12px!important;
+}
+
+:host >>> .mat-dialog-content {
+ overflow: hidden;
+}
+
+* {
+  font-family: Myriad Pro Regular !important;
+}
+

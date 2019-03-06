@@ -1,0 +1,138 @@
+.mat-toolbar.mat-toolbar-row.topbar {
+  background: #fff;
+}
+
+.active {
+  font-family: Myriad Pro Regular !important;
+  font-size: 15px;
+}
+
+.inactive {
+  font-family: Myriad Pro Regular !important;
+  font-size: 15px;
+}
+
+.mat-list-item.active {
+  color: white;
+}
+
+/*
+Top bar menu separator
+*/
+mat-list-item {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.mat-item-spacing {
+  margin-left: 12px;
+}
+
+#search {
+  padding-left: 25px;
+  font-weight: normal;
+  font-size: 14px;
+  border: none;
+  flex: 1;
+}
+
+#search:focus {
+  border: none;
+}
+
+#search-label {
+  position: relative;
+  margin: 0px;
+  margin-right: 50px;
+  flex: 1 1 auto;
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.content {
+  margin: 10px;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-row.second-top-bar {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.mat-list-item {
+  margin: 0;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+}
+
+.second-top-bar {
+  height: 58px;
+  background-color: #1c8ed7;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  padding-left: 0;
+}
+
+.logout-icon {
+  font-size: 20px;
+  color: rgba(119, 119, 119);
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.menu-field {
+  font-family: Myriad Pro;
+  font-size: 10.5px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.62;
+  letter-spacing: normal;
+  text-align: left;
+  color: #a5a7b0;
+}
+
+.menu-data {
+  font-family: Myriad Pro;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.72;
+  letter-spacing: normal;
+  text-align: left;
+  color: #515974;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 5px;
+}
+
+mat-divider {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mat-icon-button.logout-icon:hover {
+  background-color: rgba(30, 136, 229, 0.1);
+}
+
+.mat-icon-button .mat-icon,
+.mat-icon-button i {
+  line-height: 37px;
+}
+
+.menu-open {
+  color: #1e88e5;
+}
+
+#mn-report:hover,
+#mn-tag:hover,
+#mn-user:hover,
+#mn-industrial-shed:hover,
+#mn-dashboard:hover {
+  background-color: #1a76b1;
+}

@@ -1,0 +1,18 @@
+<div class="row justify-content-between" id="page-title-spacing">
+  <span id="page-title-dialog">
+    {{title}}
+  </span>
+
+  <button id="bt-close" mat-icon-button [mat-dialog-close]="false" class="close-dialog">
+    <i class="ti-close"></i>
+  </button>
+</div>
+
+<mat-dialog-content id="dg-subtitle" class="mat-dialog-custom">
+  {{subtitle}}
+</mat-dialog-content>
+
+<div id="footer-dialog" class="d-flex flex-row-reverse">
+  <button id="md-confirm" mat-button [mat-dialog-close]="true">{{yesAction}}</button>
+  <button id="md-cancel" mat-button mat-dialog-close>{{noAction}}</button>
+</div>

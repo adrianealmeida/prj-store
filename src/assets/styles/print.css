@@ -1,0 +1,150 @@
+@media print {
+  app-root * {
+    /* visibility: hidden; */
+    display: none;
+  }
+
+  @page {
+    size: 210mm 297mm;
+    margin-top: 18mm;
+    margin-bottom: 18mm;
+    margin-left: 4mm;
+    margin-right: 4mm;
+  }
+
+  #print-content * {
+    overflow: visible;
+  }
+
+  * {
+    float: none;
+  }
+
+  .modal-footer,
+  .modal-header,
+  #page-title-spacing {
+    display: none;
+  }
+
+  .modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    min-height: 550px;
+    visibility: visible;
+    /**Remove scrollbar for printing.**/
+    overflow: visible !important;
+    display: block;
+    border: 5px !important;
+  }
+
+  .modal-dialog {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0 !important;
+
+    visibility: visible !important;
+    /**Remove scrollbar for printing.**/
+    overflow: visible !important;
+    width: 100% !important;
+    /* height: 100% !important; */
+  }
+
+  .modal-body {
+    visibility: visible !important;
+    overflow-y: visible !important;
+    overflow: visible;
+  }
+
+  .modal-content {
+    width: 1191px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px !important;
+  }
+
+  li {
+    page-break-after: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  tr {
+    padding-right: 10px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 5px;
+    border: 5px;
+    width: 100px;
+  }
+
+  table,
+  pre {
+    page-break-inside: avoid;
+    border-style: dotted;
+  }
+  ul,
+  ol,
+  dl {
+    page-break-before: avoid;
+  }
+
+  .mat-column-number {
+    flex-grow: 0.5 !important;
+  }
+
+  .mat-column-address,
+  .mat-column-picking {
+    flex-grow: 2 !important;
+    padding-right: 10px !important;
+    max-width: 250px !important;
+  }
+
+  .mat-column-registerId {
+    flex-grow: 2 !important;
+    padding-right: 10px !important;
+    max-width: 115px !important;
+  }
+
+  .mat-column-pickingCode {
+    flex-grow: 2 !important;
+    padding-right: 10px !important;
+    max-width: 180px !important;
+  }
+
+  .mat-column-departureCode {
+    flex-grow: 2 !important;
+    padding-right: 10px !important;
+    max-width: 150px !important;
+  }
+
+  .mat-column-industrialShed,
+  .mat-column-industrialShedDeparture,
+  .mat-column-warehouse,
+  .mat-column-userName,
+  .mat-column-productDescription {
+    flex-grow: 3 !important;
+
+    padding-right: 10px !important;
+    max-width: 250px !important;
+  }
+
+  .mat-column-userNameDeparture,
+  .mat-column-industrialShedDeparture {
+    flex-grow: 3 !important;
+
+    padding-right: 10px !important;
+    max-width: 220px !important;
+  }
+
+  .mat-column-industrialShedPicking {
+    flex-grow: 3 !important;
+
+    padding-right: 10px !important;
+    max-width: 400px !important;
+  }
+}
