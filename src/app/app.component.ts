@@ -15,8 +15,7 @@ import { Subscription } from 'rxjs';
 export class AppComponent implements OnInit {
   public loadingRef: MatDialogRef<LoadingComponent>;
   public itemClass: string = Constants.PATH_PRODUCT;
-  public showSearchAction: boolean =
-    this.itemClass === Constants.PATH_PRODUCT;
+  public showSearchAction: boolean = this.itemClass === Constants.PATH_PRODUCT;
   public showSearch  = false;
   public searchValue = '';
   public subscriptionFilter: Subscription;
@@ -31,21 +30,25 @@ export class AppComponent implements OnInit {
 
   constructor(
     private router: Router,
-    // private location = Location,
     private dialog: MatDialog,
     private productService: ProductService,
-
-  ) { }
+  ) {
+    if (this.router.url.includes(Constants.PATH_PRODUCT)) {
+      this.itemClass = Constants.PATH_PRODUCT;
+    } else if (this.router.url.includes(Constants.PATH_ABOUT)) {
+      this.itemClass = Constants.PATH_ABOUT;
+    } else {
+      this.itemClass = 'home';
+    }
+   }
 
   public ngOnInit(): void {
-    // this.location.subscribe(data => {
-    //   if (data.type === 'popstate') {
-    //       this.itemClass = data.url.split('/')[1];
-    //   }
-    // });
 
     // necessary to send data for screens filter data
     this.subscriptionFilter = this.productService.title$.subscribe(search => {
+      console.log('search');
+      console.log(search);
+
       this.searchValue = search;
     });
 
@@ -68,12 +71,6 @@ export class AppComponent implements OnInit {
       this.showSearchComponents();
     });
   }
-
-  // public showInfo(item: string): void {
-  //   console.log(item);
-  //   this.showSearchComponents();
-  //   this.router.navigate([item]);
-  // }
 
   public showInfo(item: string): void {
     this.itemClass = item;
@@ -117,10 +114,19 @@ export class AppComponent implements OnInit {
   }
 
   public showSearchComponents(): void {
-    // this.showSearchAction = this.hasToShowActionButtonsOnTopBar();
+    console.log('asssrsrreerer');
+
+    this.showSearchAction = this.hasToShowActionButtonsOnTopBar();
     this.showSearch = false;
     this.searchValue = '';
     this.productService.searchData('');
+  }
+
+  private hasToShowActionButtonsOnTopBar(): boolean {
+    // TODO REFACTOR: Show on right screens
+    return (
+      this.itemClass === Constants.PATH_PRODUCT
+    );
   }
 
  private setSearchFocus(): void {

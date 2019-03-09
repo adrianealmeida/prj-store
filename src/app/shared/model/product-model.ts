@@ -12,22 +12,26 @@
 
 export class Product {
   constructor(
-    public name?: string,
-    public code?: number,
-    public value?: string,
-    public quantity?: number,
-    public description?: string
+    public nome?: string,
+    public codigo?: number,
+    public valor?: string,
+    public quantidade?: number,
+    public descricao?: string,
+    public _id?: string,
+    public imagem?: string
   ) {}
 
   public static fromObject(obj: Object): Product {
     let product: Product;
 
     product = new Product(
-      obj['name'],
-      obj['code'],
-      obj['value'],
-      obj['quantity'],
-      obj['description']
+      obj['nome'],
+      obj['codigo'],
+      obj['valor'],
+      obj['quantidade'],
+      obj['descricao'],
+      obj['_id'],
+      obj['image']
     );
 
     return product;

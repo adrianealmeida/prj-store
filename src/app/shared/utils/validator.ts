@@ -64,4 +64,31 @@ export class ValidatorCustom {
       }
     };
   }
+
+  public static numericOnly(control: FormControl): ValidationErrors {
+    return ValidatorCustom.genericExclusion(
+      control,
+      Constants.NOT_NUMBER_REGEX
+    );
+  }
+
+  public static genericExclusion(
+    control: FormControl,
+    regex: RegExp
+  ): ValidationErrors {
+    if (control && control.valueChanges) {
+      const valueChangesUn: Subscription = control.valueChanges.subscribe(
+        value => {
+          if (value && value.length > 0) {
+            control.setValue(value.toLocaleUpperCase().replace(regex, ''), {
+              emitEvent: false
+            });
+          }
+          valueChangesUn.unsubscribe();
+        }
+      );
+    }
+
+    return null;
+  }
 }

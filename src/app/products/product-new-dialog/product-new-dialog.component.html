@@ -3,7 +3,7 @@
     {{pageTitle}}
   </span>
 
-  <button id="bt-close" mat-icon-button (click)="closeDialog()" class="close-dialog">
+  <button id="bt-close" mat-icon-button color="primary" (click)="closeDialog()" class="close-dialog">
     <i class="ti-close"></i>
   </button>
 </div>
@@ -15,12 +15,12 @@
       <div class="col">
         <span id="basic-addon1" class="field-class">Nome*</span>
         <input cdkFocusInitial id="md-txt-name" type="text" class="form-control" placeholder="{{placeHolderName}}" required maxlength="30"
-          [formControl]="name" />
+          [formControl]="nome" />
       </div>
       <div class="col">
         <span id="basic-addon1" class="field-class">Descrição*</span>
         <input id="md-txt-description" type="text" class="form-control" placeholder="{{placeHolderDescription}}" required maxlength="45"
-          [formControl]="description" />
+          [formControl]="descricao" />
       </div>
     </div>
 
@@ -28,27 +28,24 @@
       <div class="col">
         <span id="basic-addon1" class="field-class">Código*</span>
         <input cdkFocusInitial id="md-txt-code" type="text" class="form-control" placeholder="{{placeHolderCode}}" required maxlength="10"
-          [formControl]="code" />
+          [formControl]="codigo" />
       </div>
       <div class="col">
         <span id="basic-addon1" class="field-class">Quantidade*</span>
         <input id="md-txt-quantity" type="text" class="form-control" placeholder="{{placeHolderQuantity}}" required maxlength="6"
-          [formControl]="quantity" />
+          [formControl]="quantidade" />
       </div>
       <div class="col">
         <span id="basic-addon1" class="field-class">Valor*</span>
         <input id="md-txt-value" type="text" class="form-control" placeholder="{{placeHolderValue}}" required maxlength="6"
-          [formControl]="value" />
+          [formControl]="valor" />
       </div>
     </div>
 
   </div>
   <div id="footer-dialog" class="d-flex flex-row-reverse" *ngIf="!productForm.disabled">
-    <button id="md-edit" mat-button type="submit" [disabled]="isDisabled()">Confirmar</button>
-    <button id="md-cancel" type="button" mat-button (click)="closeDialog()" class="cancel">Cancelar</button>
-  </div>
-  <div id="footer-dialog" class="d-flex flex-row-reverse" *ngIf="isDetail">
-    <button id="md-close-view" mat-button (click)="closeDialog()" class="cancel">Fechar</button>
+    <button id="md-edit" mat-button color="primary" type="submit" [disabled]="isDisabled()">Confirmar</button>
+    <button id="md-cancel" type="button" mat-button color="primary" (click)="closeDialog()" class="cancel">Cancelar</button>
   </div>
 
 </form>

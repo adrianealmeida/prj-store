@@ -1,0 +1,14 @@
+.actual:before {
+  content: initial !important;
+}
+
+.content-image {
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#image-home {
+  height: calc(100vh - 100px);
+}

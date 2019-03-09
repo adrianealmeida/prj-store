@@ -129,10 +129,15 @@ mat-divider {
   color: #1e88e5;
 }
 
-#mn-report:hover,
-#mn-tag:hover,
-#mn-user:hover,
-#mn-industrial-shed:hover,
-#mn-dashboard:hover {
+#mn-home:hover,
+#mn-product:hover,
+#mn-about:hover,
+{
   background-color: #1a76b1;
+}
+
+.fill-remaining-space {
+  /* // This fills the remaining space, by using flexbox.
+  // Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
 }

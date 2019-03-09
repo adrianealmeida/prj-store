@@ -1,17 +1,4 @@
-/*
- * Copyright (c) 2018
- *
- * OXBIKE, All Rights Reserved.
- *
- * NOTICE:  All information contained herein is, and remains the property of OX BIKE and its suppliers, if any.
- * The intellectual and technical concepts contained herein are proprietary to OX BIKE and its suppliers and
- * may be covered by U.S. and Foreign Patents, patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material is strictly forbidden unless prior
- * written permission is obtained from OXBIKE.
- */
-
 export class Constants {
-
   // ROUTES
   public static readonly PATH_EMPTY = '';
   public static readonly PATH_HOME = '';
@@ -46,6 +33,9 @@ export class Constants {
   public static readonly PRODUCT_PLACEHOLDER_VALUE: string =
     'Informe o valor do produto';
 
+  public static readonly PRODUCT_NO_REGISTERED_DATA = 'Nenhum produto cadastrado';
+  public static readonly PRODUCT_NOT_FOUND = 'Não há registros deste produto';
+
   public static readonly PRODUCT_NAME_MAX_LENGTH: number = 30;
   public static readonly PRODUCT_CODE_MAX_LENGTH: number = 10;
   public static readonly PRODUCT_DESCRIPTION_MAX_LENGTH: number = 45;
@@ -60,4 +50,6 @@ export class Constants {
   public static readonly NO_ACTION_TXT: string = 'Cancelar';
   public static readonly YES_ACTION_TXT: string = 'Confirmar';
   public static readonly DELETE_DIALOG_YES_ACTION: string = 'Excluir';
+
+  public static readonly NOT_NUMBER_REGEX = /[^0-9]/g;
 }

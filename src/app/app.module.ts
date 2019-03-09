@@ -14,6 +14,7 @@ import { LoadingComponent } from './shared/components/loading/loading.component'
 import { ConfirmComponent } from './shared/components/confirm/confirm.component';
 import { ProductService } from './service/product.service';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     HomeModule,
     ProductsModule,
     AboutModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   entryComponents: [
     ConfirmComponent,

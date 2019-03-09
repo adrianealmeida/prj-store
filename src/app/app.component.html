@@ -1,35 +1,73 @@
-<mat-toolbar color="primary">
-  <span>Loja</span>
+<mat-toolbar>
+  <mat-toolbar-row color="primary" style="background-color: #FFEBEE;">
+    <span style="color: rgb(216, 105, 123)">Loja de Laços Maria Bonita</span>
+
+    <label id="search-label" [hidden]="!showSearch">
+        <input
+          id="search"
+          placeholder="Procurar agora..."
+          #search
+          (keyup)="onKey(search.value)"
+          [(ngModel)]="searchValue"
+        />
+      </label>
+
+      <!-- This fills the remaining space of the current row -->
+      <span class="fill-remaining-space" [hidden]="showSearch"></span>
+
+      <button
+        id="bt-search"
+        mat-icon-button
+        (click)="onShowSearch()"
+        class="logout-icon"
+        [hidden]="!showSearchAction"
+      >
+        <i class="dripicons dripicons-search noti-icon"></i>
+      </button>
+
+  </mat-toolbar-row>
+
+  <mat-toolbar-row style="background-color: #FFEBEE;" hidden="true">
+    <label id="search-label" [hidden]="!showSearch">
+      <input
+        id="search"
+        placeholder="Procurar agora..."
+        #search
+        (keyup)="onKey(search.value)"
+        [(ngModel)]="searchValue"
+      />
+    </label>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill-remaining-space" [hidden]="showSearch"></span>
+
+    <button
+      id="bt-search"
+      mat-icon-button
+      (click)="onShowSearch()"
+      class="logout-icon"
+      [hidden]="!showSearchAction"
+    >
+      <i class="dripicons dripicons-search noti-icon"></i>
+    </button>
+  </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-toolbar-row style="background-color: white;">
-  <label id="search-label" [hidden]="!showSearch">
-    <input id="search" placeholder="Procurar agora..."  #search (keyup)="onKey(search.value)" [(ngModel)]='searchValue' />
-  </label>
-
-  <!-- This fills the remaining space of the current row -->
-  <span class="fill-remaining-space" [hidden]="showSearch"></span>
-
-  <button id="bt-search" mat-icon-button (click)="onShowSearch()" class="logout-icon" [hidden]="!showSearchAction">
-    <i class="dripicons dripicons-search noti-icon"></i>
-  </button>
-</mat-toolbar-row>
-
-<mat-toolbar-row class="second-top-bar">
-  <mat-list-item (click)="showInfo('home')">
-    <a matLine><span>Home</span></a>
+<mat-toolbar-row class="second-top-bar" style="background: #FFEBEE">
+  <mat-list-item id="mn-home" (click)="showInfo('')" [class.active]="'home' == itemClass" [class.inactive]="'home' != itemClass">
+    <a matLine><span style="color: rgb(216, 105, 123)">Home</span></a>
   </mat-list-item>
-  <mat-list-item (click)="showInfo('product')">
-    <a matLine><span>Produtos</span></a>
+  <mat-list-item id="mn-product" (click)="showInfo('product')" [class.active]="'product' == itemClass" [class.inactive]="'product' != itemClass">
+    <a matLine><span style="color: rgb(216, 105, 123)">Produtos</span></a>
   </mat-list-item>
-  <mat-list-item (click)="showInfo('about')">
-    <a matLine><span>Sobre</span></a>
+  <mat-list-item id="mn-about" (click)="showInfo('about')" [class.active]="'about' == itemClass" [class.inactive]="'about' != itemClass">
+    <a matLine><span style="color: rgb(216, 105, 123)">Sobre Nós</span></a>
   </mat-list-item>
 </mat-toolbar-row>
 
-<div class="home-spacing">
+<div class="home-spacing" style="margin: 20px">
   <router-outlet></router-outlet>
 </div>
 
 <!-- footer -->
-<span class="footer">© 2019 Menina de Laço</span>
+<span class="footer"> © 2019, Laços Maria Bonita. Todos os direitos reservados.</span>

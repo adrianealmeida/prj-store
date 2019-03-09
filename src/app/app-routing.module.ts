@@ -5,12 +5,10 @@ import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
-  // { path: 'home', component: HomeComponent },
   { path: 'product', component: ProductsComponent },
   { path: 'about', component: AboutComponent},
-  // tinha isso dentro de about, ver depois ->> , canActivate: [TesteGuard]
-  { path: '', component: ProductsComponent },
-  { path: '**', component: ProductsComponent }
+  { path: '', component: HomeComponent },
+  { path: '**', component: HomeComponent, redirectTo: '' }
 ];
 
 @NgModule({

@@ -1,0 +1,31 @@
+#page-title-dialog {
+  font-family: Myriad Pro;
+  font-size: 21px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  text-align: left;
+  color: #000000;
+  padding: 10px;
+}
+
+.field-class {
+  font-family: Myriad Pro Regular !important;
+  font-size: 13.5px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: 27px !important;
+  letter-spacing: normal !important;
+  text-align: left !important;
+  color: #70778f !important;
+}
+
+#footer-dialog {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-left: 22px;
+  margin-right: 22px;
+}
