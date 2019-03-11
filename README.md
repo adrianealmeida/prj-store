@@ -1,27 +1,22 @@
 # PrjStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
+Projeto contendo uma Web App e consumindo uma API RESTful para gerenciar produtos de uma loja virtual fictícia.
 
-## Development server
+# Executar a aplicação 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1- Clone ou baixe o repositório https://github.com/adrianealmeida/prj-store, 
+2- Estando no diretório do projeto, abra o console: npm install
+3- Para executar, estando no diretório do projeto, abra o console: npm start
+4- Acesse http://localhost:4200
 
-## Code scaffolding
+Para executar a API:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1-Clone ou baixe este repositório e, estando no diretório do projeto, abra o console: npm install
+2-Para executar, estando no diretório do projeto, abra o console: npm start
+3-Para testar as requisições, utilize o software de sua preferência e acesse: http://localhost:8080
 
-## Build
+# Tecnologias utilizadas no projeto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Angular CLI 7.3.3
+Booststrap 4
+Angular Material 7.3.3
