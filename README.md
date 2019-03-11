@@ -23,7 +23,7 @@ Projeto contendo uma Web App e consumindo uma API RESTful para gerenciar produto
 2- Para executar, estando no diretório do projeto, abra o console: npm start
 
 
-3- Para testar as requisições, acesse: 
+3- Para testar as requisições, acesse: http://localhost:8080
 
 ## Tecnologias Utilizadas no Projeto
 
